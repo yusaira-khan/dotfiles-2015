@@ -1,4 +1,3 @@
-
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -198,11 +197,21 @@ TBlue='tput setaf 4'
 TPurple='tput setaf 5'
 TCyan='tput setaf 6'
 TWhite='tput setaf 7'
+TBlack='tput setaf 0'
+TRedB='tput setab 1'
+TGreenB='tput setab 2'
+TYellowB='tput setab 3'
+TBlueB='tput setab 4'
+TPurpleB='tput setab 5'
+TCyanB='tput setab 6'
+TWhiteB='tput setab 7'
 TOff='tput sgr0'
 
-PS1="[\[$BGreen\]\u\[$Color_Off\]@\[$BBlue\]\h\[$Color_Off\]: \[$On_Yellow\]\w\[$Color_Off\]]\[$BYellow\]$\[$Color_Off\] "
+PS1="[\[$BPurple\]\u\[$Color_Off\]@\[$BYellow\]\h\[$Color_Off\]: \[$On_Purple\]\w\[$Color_Off\]]\[$BYellow\]$\[$Color_Off\] "
 export PS1
 alias bashrc="vim ~/.bashrc && echo -e sourcing edited file:\$($TGreen) ~/.bashrc\$($TOff) && source ~/.bashrc"
 alias searchpk="apt-cache search"
 alias n_m="cd /usr/local/lib/node_modules/"
-
+alias tp_off="xinput set-prop 12 \"Device Enabled\" 0"
+alias tp_on="xinput set-prop 12 \"Device Enabled\" 1"
+alias wifi_pooper="echo sudo service network-manager restart && sudo service network-manager restart"
